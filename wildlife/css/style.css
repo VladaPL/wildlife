@@ -1,0 +1,400 @@
+/* roboto-regular - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/roboto-v20-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/roboto-v20-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* open-sans-regular - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/open-sans-v18-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/open-sans-v18-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: normal;
+  color: #f7f7f7;
+}
+
+.wrapper-zero {
+  width: 1440px;
+  margin-left: auto; /* выравниваем блок по центру*/
+  margin-right: auto; /* выравниваем блок по центру*/
+}
+
+.wrapper {
+  /* обертка для контента */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header styles start */
+
+.header {
+  position: absolute; /* fixed заменила, чтобы не было скроллинга*/
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap; /*перенос контента на другую строку*/
+  align-items: flex-end; /* управляет выравниванием элементов вдоль поперечной оси*/
+  justify-content: space-between; /* выровнить элементы по краям контейнера*/
+  /* в уроке 23:56, есть отступ сверху padding-top*/
+}
+
+.header__logo {
+  width: 245px;
+  height: 85px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+.header-logo__pic {
+  width: 70px;
+  height: 60px;
+  margin: 0;
+}
+
+.header-logo__text {
+  width: 155px;
+  height: 60px;
+  font-family: Roboto;
+  font-size: 32px;
+  line-height: 60px;
+  color: #f7f7f7;
+  padding-left: 15px;
+}
+
+.header-logo__text-p {
+  margin: 0;
+}
+.header-logo-text__link {
+  text-decoration: none;
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap; /* перенос контента на другую строку чтобы элементы не налезали друг на друга*/
+  margin-bottom: 2px;
+}
+
+li {
+  list-style-type: none;
+}
+.header__item {
+  margin-right: 65px; /* расстояние между пунктами */
+}
+.header__item:last-child {
+  /* обнуляем отступ у пункта Sign in */
+  margin-right: 0px;
+}
+
+.header__link {
+  font-size: 23px;
+  line-height: 60px;
+  color: #f7f7f7;
+  text-decoration: none;
+}
+.header__link:hover,
+.header__link:focus,
+.header__link:active {
+  opacity: 0.7;
+}
+
+.frame {
+  /*рамка вокруг Sign in. НУЖНО ОТРЕДАКТИРОВАТЬ РАЗМЕР*/
+  border: 2px solid #cd6326;
+  border-radius: 5px;
+  width: 120px;
+  height: 50px;
+  padding-left: 23px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.sign_in {
+}
+
+/* Header styles end */
+
+/* Intro styles start */
+.intro {
+  min-height: 780px;
+  background: url(../img/intro-bg.jpg) no-repeat center;
+  background-size: cover; /* картинка покрывает блок при любых его размерах*/
+  padding-top: 170px;
+}
+
+.intro__title {
+  font-style: normal; /* почему-то по умолчанию font-style и font-weight не применяются*/
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 72px;
+  /* identical to box height, or 150% */
+  letter-spacing: 2px;
+  color: #cd6326;
+  margin-bottom: 51px;
+}
+.intro__subtitle {
+  max-width: 274px;
+  font-style: normal; /* font-style и font-weight в уроке не ставились, проверить надобность*/
+  font-weight: normal;
+  color: #f7f7f7;
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 48px;
+}
+
+.donate {
+  padding: 16px 42px;
+  font-family: "Roboto";
+  font-size: 23px;
+  line-height: 27px;
+  color: #f7f7f7;
+  background: #cd6326;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.donate:hover,
+.donate:focus {
+  background: #e39128;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  outline: none; /* убирает рамку, появившуюся при нажатии кнопки*/
+}
+.donate:active {
+  background: #8f5613;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/* Intro styles end */
+
+/* Latest-aricles styles start */
+.latest-aricles {
+  background-color: #cccccc;
+}
+
+.latest-aricles__title {
+  margin: 0;
+}
+.latest-aricles__title {
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 72px;
+  text-align: center;
+  color: #333333;
+  padding-top: 120px;
+}
+.latest-aricles__news {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #666666;
+  padding-top: 20px;
+  padding-bottom: 120px;
+  margin: 0cm;
+}
+
+.latest-aricles__cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /*создали 3 колонки*/
+  grid-column-gap: 60px; /* расстояние между колонок*/
+  padding-bottom: 239px;
+}
+
+#deer-img {
+  background-image: url(../img/deer.jpg);
+  width: 300px;
+  height: 360px;
+}
+#squirrel-img {
+  background-image: url(../img/squirrel.jpg);
+  width: 300px;
+  height: 360px;
+}
+#bird-img {
+  background-image: url(../img/bird.jpg);
+  width: 300px;
+  height: 360px;
+}
+
+.arrow {
+  position: relative;
+  cursor: pointer;
+}
+
+.arrow_pic {
+  position: absolute;
+  top: 45%;
+}
+
+.card__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 36px;
+  text-align: center;
+  color: #f7f7f7;
+  margin: 0;
+  padding-top: 247px;
+}
+.card__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 27px;
+  text-align: center;
+  color: #f7f7f7;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.arrow:hover,
+.arrow:focus,
+.arrow:active {
+  opacity: 0.6;
+}
+.latest-aricles__card {
+  cursor: pointer;
+}
+.latest-aricles__card :focus {
+  opacity: 0.6;
+}
+
+/* Latest-aricles styles end */
+
+/* Get notified styles start */
+.get-notified {
+  background-color: #cccccc;
+}
+.get-notified__title {
+  margin: 0;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 40px;
+  text-align: center;
+  color: #333333;
+  padding-bottom: 45px;
+}
+.search-form__wrap {
+  border: 0;
+  padding: 0;
+}
+.search-form__info {
+  text-align: center;
+  /*display: flex;
+  flex-wrap: wrap;*/
+}
+
+.search-form__field {
+  width: 540px;
+  height: 60px;
+  border: 0;
+  border-top: 1px solid #666666;
+  border-left: 1px solid #666666;
+  border-bottom: 1px solid #666666;
+  padding-left: 15px; /* расстояние от рамки до email*/
+  padding-right: 15px;
+  font-family: Roboto;
+  font-size: 23px;
+  line-height: 27px;
+  color: #666666;
+}
+.search-form {
+  padding-bottom: 227px;
+}
+
+.search-form__submit {
+  width: 120px;
+  height: 60px;
+  border: 0;
+  background: #cd6326;
+  border: 1px solid #cd6326;
+  border-radius: 0px 5px 5px 0px;
+  font-family: Roboto;
+  font-size: 23px;
+  line-height: 27px;
+  align-items: center;
+  text-align: center;
+  color: #f7f7f7;
+}
+/* Get notified styles end */
+
+/* Footer styles start */
+.footer {
+  background: url(../img/footer-image-bg.jpg) no-repeat center;
+  padding-top: 117px;
+  padding-bottom: 150px;
+}
+
+.footer_wrapper {
+  display: flex;
+  flex-wrap: wrap; /*перенос контента на другую строку*/
+  align-items: flex-end; /* управляет выравниванием элементов вдоль поперечной оси*/
+  justify-content: space-between; /* выровнить элементы по краям контейнера*/
+  /* в уроке 23:56, есть отступ сверху padding-top*/
+}
+
+.footer_logo {
+  margin-top: 10px;
+  margin-right: 63px;
+}
+
+.footer_list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+.footer_item {
+  margin-right: 85px;
+}
+.footer_item:last-child {
+  margin-right: 90px;
+}
+
+.footer_item__link {
+  text-decoration: none;
+  font-size: 23px;
+  line-height: 60px;
+  color: #f7f7f7;
+}
+
+.footer_list-social-madia {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+.footer_item-social-madia {
+  margin-right: 27px;
+}
+.footer_item-social-madia:last-child {
+  margin-right: 0;
+}
+/* Footer styles end */
